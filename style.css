@@ -1,0 +1,171 @@
+input {
+  width: 150px;
+  height: 100px;
+  font-size: 75px;
+  border-radius: 20px;
+  margin: 5px;
+  background-color: rgb(11, 223, 163);
+  color: rgb(70, 10, 59);
+  border-color: blue;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  cursor: pointer;
+}
+#myform {
+  margin-left: 400px;
+  margin-top: 20px;
+  margin-right: 440px; /*border:medium solid purple;*/
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(100, 234, 4, 0.1);
+}
+#my-box {
+  width: 200px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  padding: 20px;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: 20px;
+  color: rgb(72, 72, 72);
+  border: 10px;
+  color: white;
+  font-size: 55px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(28, 173, 161);
+}
+input[type="button"]:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 10px rgba(135, 247, 6, 0.2);
+}
+div {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+#exchange-rate {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #555;
+}
+h2 {
+  text-align: center;
+  color: #333;
+}
+input[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  width: 100%; /* Make result bars wider */
+  font-weight: bold; /* Make result text bold for better visibility */
+}
+.calculator-section {
+  background-color: white;
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  text-align: center;
+}
+div {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+}.calculator-section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+    width: 100%; /* Make result bars wider */
+    font-weight: bold; /* Make result text bold for better visibility */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding to result input */
+    margin-top: 10px; /* Add margin to result input */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Add border to result input */
+}
+
+.bmi-temp-form {
+    display: flex;
+    justify-content: center; /* Center the elements horizontally */
+    align-items: center; /* Center the elements vertically */
+    gap: 20px; /* Add space between the elements */
+}
+
+.box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.bmi-temp-form input,
+.bmi-temp-form select {
+    width: 100%; /* Make inputs take full width inside their boxes */
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.bmi-temp-form input[type="button"] {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bmi-temp-form input[type="button"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+
+}
+.button-container {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 90px; /* Space between buttons */
+    background-color: #282c34;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.circle-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+

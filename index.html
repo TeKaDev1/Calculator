@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Teka's Calculater" />
+    <title>Calculater</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Basic Calculater</h1>
+    
+    <br />
+    <form id="myform" name="calc">
+      <input name="display" style="width: 635px;height: 100px;text-align:center;background-color:  rgb(11, 223, 163);" />
+      <br />
+      <input type="button" value="0" onclick="calc.display.value+='0'" />
+      <input type="button" value="1" onclick="calc.display.value+='1'"/>
+      <input type="button" value="2" onclick="calc.display.value+='2'"/>
+      <input type="button" value="+" onclick="calc.display.value+='+'" style="background-color: rgb(177, 177, 177);" /><br />
+      <input type="button" value="3" onclick="calc.display.value+='3'"/>
+      <input type="button" value="4" onclick="calc.display.value+='4'"/>
+      <input type="button" value="5" onclick="calc.display.value+='5'"/>
+      <input type="button" value="-" onclick="calc.display.value+='-'" style="background-color: rgb(237, 113, 177);"/><br />
+      <input type="button" value="6" onclick="calc.display.value+='6'"/>
+      <input type="button" value="7" onclick="calc.display.value+='7'"/>
+      <input type="button" value="8" onclick="calc.display.value+='8'"/>
+      <input type="button" value="x" onclick="calc.display.value+='*'" style="background-color: rgb(78, 129, 130);" /><br />
+      <input type="button" value="9" onclick="calc.display.value+='9'"/>
+      <input type="button" value="c" onclick="calc.display.value=''" style="background-color: rgb(252, 179, 10);" />
+      <input type="button" value="=" onclick="calc.display.value=eval(calc.display.value)"/>
+      <input type="button" value="&#247;" onclick="calc.display.value+='/'" style="background-color: rgb(150, 215, 85);"/>
+      <input type="button" value="sin" onclick="calc.display.value=Math.sin(calc.display.value)" />
+      <input type="button" value="cos" onclick="calc.display.value=Math.cos(calc.display.value)" />
+      <input type="button" value="tan" onclick="calc.display.value=Math.tan(calc.display.value)" />
+      <input type="button" value="log" onclick="calc.display.value=Math.log(calc.display.value)" />
+      <input type="button" value="√ SR" onclick="calc.display.value=Math.sqrt(calc.display.value)" style="width: auto;background-color: rgb(38, 168, 244);"/>
+      <input type="button" value="% Percent" onclick="calc.display.value+=' / 100'" style="width: auto;background-color: rgb(25, 171, 130);" /> 
+      <input type="button" value="PWR" onclick="calc.display.value+='**'" style="width: 145px; background-color: blueviolet;"  /> </form>
+      
+     
+    
+      <br>
+      <div class="calculator-section"> <h2>BMI Calculator</h2> <form id="bmi-form" class="bmi-temp-form"> <input type="number" id="weight" placeholder="Weight (kg)"> <input type="number" id="height" placeholder="Height (cm)"> <input type="button" value="Calculate BMI" onclick="calculateBMI()"> <input type="text" id="bmi-result" readonly> </form> 
+      </div> 
+      <div class="calculator-section"> <h2>Temperature Converter</h2> <form id="temp-form" class="bmi-temp-form"> <input type="number" id="temp-input" placeholder="Temperature"> <select id="temp-unit"> <option value="C">Celsius</option> <option value="F">Fahrenheit</option> </select> <input type="button" value="Convert" onclick="convertTemperature()"> <input type="text" id="temp-result" readonly> </form>
+      </div> 
+     <script src="script.js"></script>
+
+     <div class="button-container">
+      <button class="circle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+<style>
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  .dark-mode input {
+    background-color: #333;
+    color: white;
+  }
+</style>
+<button class="circle-btn" onclick="startDictation()">🎤 Voice Input</button>
+<script>
+  function startDictation() {
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+      var recognition = new webkitSpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        calc.display.value += e.results[0][0].transcript;
+        recognition.stop();
+      };
+      
+      recognition.onerror = function(e) {
+        recognition.stop();
+      };
+    }
+    
+  }
+</script>
+
+
+  
+    </form>
+    </div>
+    
+    <div>
+        <h1>All right's received by ® Teka </h1>
+        
+    </div>
+    
+  </body>
+</html>
